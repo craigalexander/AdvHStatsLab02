@@ -212,7 +212,7 @@ Hint
 <p>Look again at the result of the <code>str()</code> function.</p>
 </div>
 <p><br>
-It is also worth checking is there are missing values in this data set.</p>
+It is also worth checking if there are missing values in this data set.</p>
 <p>To find how many observations we are missing from the weight variable you can run the following R code:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducing-the-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">is.na</span>(yrbss<span class="sc">$</span>weight))</span></code></pre></div>
 <p>The <code>is.na()</code> function creates a vector that corresponds to the variable provided, (<code>weight</code> in this instance, from our dataset <strong>yrbss</strong>) with <code>TRUE</code> for a missing value and <code>FALSE</code> for a non-missing value. The <code>sum()</code> function then adds up the elements in this created vector such that <code>TRUE</code> is equivalent to 1 and <code>FALSE</code> is equivalent to 0 and hence the sum of this vector is equivalent to the number of <code>TRUE</code> entries which calculates how many of these "NA" values there are.</p>

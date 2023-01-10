@@ -55,7 +55,7 @@ Look again at the result of the `str()` function.
 `r unhide()`
 
 <br>
-It is also worth checking is there are missing values in this data set.
+It is also worth checking if there are missing values in this data set.
 
 To find how many observations we are missing from the weight variable you can run the following R code:
 
