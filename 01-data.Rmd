@@ -48,10 +48,44 @@ str(yrbss)
 <br>
 
 **How many observations/rows are there in the entire data set?**
-`r fitb(8351)`
+`r fitb(13583)`
 
 `r hide("Hint")`
 Look again at the result of the `str()` function.
 `r unhide()`
 
 <br>
+It is also worth checking is there are missing values in this data set.
+
+To find how many observations we are missing from the weight variable you can run the following R code:
+
+```{r missing, echo=TRUE, eval=FALSE}
+sum(is.na(yrbss$weight))
+```
+
+The `is.na()` function creates a vector that corresponds to the variable provided, (`weight` in this instance, from our dataset **yrbss**) with `TRUE` for a missing value and `FALSE` for a non-missing value. The `sum()` function then adds up the elements in this created vector such that `TRUE` is equivalent to 1 and `FALSE` is equivalent to 0 and hence the sum of this vector is equivalent to the number of `TRUE` entries which calculates how many of these "NA" values there are.
+
+<br>
+**How many observations are we missing weights from? You will find the previous example useful.**
+`r fitb(1004)`
+
+`r hide("Hint")`
+Use the function `sum(is.na(YRBSS$...))`.
+`r unhide()`
+
+<br>
+
+We can remove observations with missing values and create a data set without these using the code below:
+
+```{r remove, echo=TRUE, eval=FALSE}
+yrbss <- na.omit(yrbss)
+```
+<br>
+
+
+**How many observations/rows are there in the new entire data set (with missing values removed)?**
+`r fitb(8351)`
+
+`r hide("Hint")`
+Look again at the result of the `str()` function.
+`r unhide()`

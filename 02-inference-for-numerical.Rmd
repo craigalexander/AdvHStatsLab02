@@ -4,18 +4,18 @@
 knitr::include_graphics("images/meet_data.jpg")
 ```
 
-Using the data from the YRBSS survey, we will now analyze the weight of the students in kilograms, stored in the `weight` variable in the `YRBSS` data frame.  **Please note that for the next section our data set is called `YRBSS`, the capital letters are important, we will go back to `yrbss` afterwards though**
+Using the data from the yrbss survey, we will now analyze the weight of the students in kilograms, stored in the `weight` variable in the `yrbss` data frame.
 
 We can obtain the summary statistics of the variable by running the following code:
 
 ```{r summary, echo=TRUE, eval=FALSE}
-summary(YRBSS$weight)
+summary(yrbss$weight)
 ```
 
 To visualise the distribution of the weights, you may want to produce a box-plot for the `weight` variable by running the following code:
 
 ```{r boxplot, echo=TRUE, eval=FALSE}
-ggplot(data = YRBSS, mapping = aes(y = weight)) +
+ggplot(data = yrbss, mapping = aes(y = weight)) +
   geom_boxplot()
 ```
 
@@ -30,7 +30,7 @@ We want to use the function `ggplot()`, specifying the data argument and the var
 `r unhide()`
 
 ```{r ex1_solution, webex.hide="Solution", echo=TRUE, eval=TRUE, warning=FALSE}
-ggplot(data = YRBSS, aes(x = weight)) +
+ggplot(data = yrbss, aes(x = weight)) +
   geom_histogram()
 ```
 
@@ -52,26 +52,6 @@ Look carefully at the shape of the graph, particularly towards the right.
 
 <br>
 
-To find how many observations we are missing from the weight variable you can run the following R code:
-
-```{r missing, echo=TRUE, eval=FALSE}
-sum(is.na(YRBSS$weight))
-```
-
-The `is.na()` function creates a vector that corresponds to the variable provided, (`weight` in this instance, from our dataset **YRBSS**) with `TRUE` for a missing value and `FALSE` for a non-missing value. The `sum()` function then adds up the elements in this created vector such that `TRUE` is equivalent to 1 and `FALSE` is equivalent to 0 and hence the sum of this vector is equivalent to the number of `TRUE` entries which calculates how many of these "NA" values there are.
-
-<br>
-
-**How many observations are we missing heights from? You will find the previous example useful.**
-`r fitb(1004)`
-
-`r hide("Hint")`
-Use the function `sum(is.na(YRBSS$...))`.
-`r unhide()`
-
-<br>
-
-**Please note that for the remaining sections our data set is called `yrbss` again**
 
 Next, consider the possible relationship between a high schooler's weight and their physical activity. Plotting the data is a useful first step because it helps us quickly visualise trends, identify strong associations and develop research questions.
 
@@ -105,10 +85,10 @@ ggplot(data = yrbss, aes(x = physical_3plus, y = weight)) +
 ```
 
 ```{r MCQ2}
-opts_Q2 <- sample(c("The median weight appears to be significantly higher for those that are not physically active 3+ days a week.",
-                    "The mean weight appears to be significantly higher for those that are physically active 3+ days a week.",
-                    answer = "The median weight appears to be significantly higher for those that are physically active 3+ days a week.",
-                    "Those that are physically active 3+ days a week on average weigh significantly more."))
+opts_Q2 <- sample(c("The median weight appears to be higher for those that are not physically active 3+ days a week.",
+                    "The mean weight appears to be higher for those that are physically active 3+ days a week.",
+                    answer = "The median weight appears to be higher for those that are physically active 3+ days a week.",
+                    "Those that are physically active 3+ days a week on average weigh more."))
 ```
 
 <br>
