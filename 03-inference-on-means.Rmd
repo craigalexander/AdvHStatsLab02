@@ -101,17 +101,17 @@ In general, we have some sort of
 $$\textrm{Statistic} \pm \textrm{Percentile of a distribution}*\textrm{Standard Error}$$
 
 More specifically, we have the following:
-$$(\mu_1 - \mu_2) \pm t^* \times \textrm{SE}$$
+$$(\bar{x}_1 - \bar{x}_2) \pm t^* \times \textrm{SE}$$
 
-So our new statistic is $(\mu_1 - \mu_2)$, the difference in averages between the two groups, our new percentile is $t^*$, from something called the t-distribution rather than the standard Normal distribution. The standard error $\textrm{SE}$ now equals
+So our new statistic is $(\bar{x}_1 - \bar{x}_2)$, the difference in averages between the two groups, our new percentile is $t^*$, from something called the t-distribution rather than the standard Normal distribution. The standard error $\textrm{SE}$ now equals
 
-$$\textrm{SE} = \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$$
+$$\textrm{SE} = \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$$
 
-where $n_1$, $n_2$ are the sample sizes of the two groups you're considering and $\sigma_1^2$, $\sigma_2^2$ are the variances of the two groups. Putting it all together, our confidence interval for the difference in means between two groups is:
+where $n_1$, $n_2$ are the sample sizes of the two groups you're considering and $s_1^2$, $s_2^2$ are the variances of the two groups. Putting it all together, our confidence interval for the difference in means between two groups is:
 
-$$(\mu_1 - \mu_2) \pm t^* \times \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$$
+$$(\bar{x}_1 - \bar{x}_2) \pm t^* \times \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}$$
 
-We first calculate $(\mu_1 - \mu_2)$, which we will save as `obs_diff`. This is the difference in the two means of the weights of the two groups of students; one that is active 3+ days a week and the other group that isn't. Namely we are taking group 1 to be "yes" active 3+ days a week and group 2 to be "no" not active 3+ days a week.
+We first calculate $(\bar{x}_1 - \bar{x}_2)$, which we will save as `obs_diff`. This is the difference in the two means of the weights of the two groups of students; one that is active 3+ days a week and the other group that isn't. Namely we are taking group 1 to be "yes" active 3+ days a week and group 2 to be "no" not active 3+ days a week.
 
 ```{r obsdiff, eval=TRUE, echo=TRUE, warning=FALSE}
 
