@@ -53,18 +53,15 @@ These labs use **packages** from the `tidyverse` suite of packages, which has be
 
 *Aside:* A **package** in R is just a collection of functions, data, documentation and compiled code that people have created to easily access and share with others.
 
-To run the code that appears in the consoles in this lab in your own version of RStudio, start by installing and loading these packages.
+To run the code that appears in the consoles in this lab start by loading these packages.
 
 ```{r load-packages, echo=TRUE, eval=FALSE}
-install.packages("tidyverse")
-install.packages("infer")
-install.packages("openintro")
-
 library(tidyverse)
 library(infer)
 library(openintro)
 ```
 
+To run the code that appears in the consoles in this lab in **your own version of RStudio**, make sure the packages above are installed. You can install packages using the `install.packages("package name")` command. For example, to install `tidyverse` you should run the line `install.packages("tidyverse")`.
 <br>
 
 **Credit where credit is due**
