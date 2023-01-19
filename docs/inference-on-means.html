@@ -192,8 +192,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Are all conditions necessary for inference satisfied for our data?</p>
 <p><br></p>
 <strong>Is the independence condition satisfied?</strong>
-<div id="radio_KHBBDAIEGH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KHBBDAIEGH" value="answer"></input> <span>Yes</span></label><label><input type="radio" autocomplete="off" name="radio_KHBBDAIEGH" value=""></input> <span>No</span></label>
+<div id="radio_OWHUTRQQLF" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OWHUTRQQLF" value="answer"></input> <span>Yes</span></label><label><input type="radio" autocomplete="off" name="radio_OWHUTRQQLF" value=""></input> <span>No</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -214,22 +214,24 @@ To make the boxplot, <code>physical_3plus</code> should be along the <span class
 <button>
 Solution
 </button>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="inference-on-means.html#cb13-1"></a>yrbss <span class="op">%&gt;%</span></span>
-<span id="cb13-2"><a href="inference-on-means.html#cb13-2"></a><span class="st">  </span><span class="kw">group_by</span>(physical_3plus) <span class="op">%&gt;%</span></span>
-<span id="cb13-3"><a href="inference-on-means.html#cb13-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>())</span></code></pre></div>
-<pre><code>## # A tibble: 2 x 2
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="inference-on-means.html#cb15-1"></a>yrbss <span class="op">%&gt;%</span></span>
+<span id="cb15-2"><a href="inference-on-means.html#cb15-2"></a><span class="st">  </span><span class="kw">group_by</span>(physical_3plus) <span class="op">%&gt;%</span></span>
+<span id="cb15-3"><a href="inference-on-means.html#cb15-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>())</span></code></pre></div>
+<pre><code>## # A tibble: 3 x 2
 ##   physical_3plus count
 ##   &lt;chr&gt;          &lt;int&gt;
-## 1 no              2656
-## 2 yes             5695</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="inference-on-means.html#cb15-1"></a><span class="kw">ggplot</span>(yrbss, <span class="kw">aes</span>(<span class="dt">y =</span> weight, <span class="dt">x =</span> physical_3plus)) <span class="op">+</span></span>
-<span id="cb15-2"><a href="inference-on-means.html#cb15-2"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
+## 1 no              4404
+## 2 yes             8906
+## 3 &lt;NA&gt;             273</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="inference-on-means.html#cb17-1"></a><span class="kw">ggplot</span>(yrbss, <span class="kw">aes</span>(<span class="dt">y =</span> weight, <span class="dt">x =</span> physical_3plus)) <span class="op">+</span></span>
+<span id="cb17-2"><a href="inference-on-means.html#cb17-2"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 1004 rows containing non-finite values (stat_boxplot).</code></pre>
 <p><img src="main_files/figure-html/ex3_solution-1.png" width="672" /></p>
 </div>
 <br>
 <strong>Is the normality condition satisfied?</strong>
-<div id="radio_GGGSADGNMB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GGGSADGNMB" value="answer"></input> <span>Yes</span></label><label><input type="radio" autocomplete="off" name="radio_GGGSADGNMB" value=""></input> <span>No</span></label>
+<div id="radio_OMCLYTHUMV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OMCLYTHUMV" value="answer"></input> <span>Yes</span></label><label><input type="radio" autocomplete="off" name="radio_OMCLYTHUMV" value=""></input> <span>No</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -248,8 +250,8 @@ and</p>
 <p><span class="math display">\[\mu_m = \textrm{Average weight of a student who is physically active 3 or more days a week}\]</span></p>
 <p><br></p>
 <strong>What are the null and alternative hypotheses for testing if the average weights are different for those who exercise at least three times a week and those who don’t?</strong>
-<div id="radio_WWOGVIQBXR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WWOGVIQBXR" value=""></input> <span><span class="math inline">\(H_0: \mu_l = \mu_m , H_1: \mu_l &lt; \mu_m\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WWOGVIQBXR" value=""></input> <span><span class="math inline">\(H_0: \mu_l = \mu_m , H_1: \mu_l &gt; \mu_m\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WWOGVIQBXR" value=""></input> <span><span class="math inline">\(H_0: \mu_l \ne \mu_m , H_1: \mu_l = \mu_m\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_WWOGVIQBXR" value="answer"></input> <span><span class="math inline">\(H_0: \mu_l = \mu_m , H_1: \mu_l \ne \mu_m\)</span></span></label>
+<div id="radio_MPEKANNBGC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MPEKANNBGC" value="answer"></input> <span><span class="math inline">\(H_0: \mu_l = \mu_m , H_1: \mu_l \ne \mu_m\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MPEKANNBGC" value=""></input> <span><span class="math inline">\(H_0: \mu_l = \mu_m , H_1: \mu_l &lt; \mu_m\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MPEKANNBGC" value=""></input> <span><span class="math inline">\(H_0: \mu_l \ne \mu_m , H_1: \mu_l = \mu_m\)</span></span></label><label><input type="radio" autocomplete="off" name="radio_MPEKANNBGC" value=""></input> <span><span class="math inline">\(H_0: \mu_l = \mu_m , H_1: \mu_l &gt; \mu_m\)</span></span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -272,48 +274,49 @@ Hint
 <p>where <span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span> are the sample sizes of the two groups you're considering and <span class="math inline">\(s_1^2\)</span>, <span class="math inline">\(s_2^2\)</span> are the variances of the two groups. Putting it all together, our confidence interval for the difference in means between two groups is:</p>
 <p><span class="math display">\[(\bar{x}_1 - \bar{x}_2) \pm t^* \times \sqrt{\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}}\]</span></p>
 <p>We first calculate <span class="math inline">\((\bar{x}_1 - \bar{x}_2)\)</span>, which we will save as <code>obs_diff</code>. This is the difference in the two means of the weights of the two groups of students; one that is active 3+ days a week and the other group that isn't. Namely we are taking group 1 to be "yes" active 3+ days a week and group 2 to be "no" not active 3+ days a week.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="inference-on-means.html#cb16-1"></a>yes &lt;-<span class="st"> </span>yrbss <span class="op">%&gt;%</span></span>
-<span id="cb16-2"><a href="inference-on-means.html#cb16-2"></a><span class="st">  </span><span class="kw">filter</span>(physical_3plus <span class="op">==</span><span class="st"> &quot;yes&quot;</span>)</span>
-<span id="cb16-3"><a href="inference-on-means.html#cb16-3"></a></span>
-<span id="cb16-4"><a href="inference-on-means.html#cb16-4"></a>no &lt;-<span class="st"> </span>yrbss <span class="op">%&gt;%</span></span>
-<span id="cb16-5"><a href="inference-on-means.html#cb16-5"></a><span class="st">  </span><span class="kw">filter</span>(physical_3plus <span class="op">==</span><span class="st"> &quot;no&quot;</span>)</span>
-<span id="cb16-6"><a href="inference-on-means.html#cb16-6"></a></span>
-<span id="cb16-7"><a href="inference-on-means.html#cb16-7"></a>mu1 &lt;-<span class="st"> </span><span class="kw">mean</span>(yes<span class="op">$</span>weight)</span>
-<span id="cb16-8"><a href="inference-on-means.html#cb16-8"></a></span>
-<span id="cb16-9"><a href="inference-on-means.html#cb16-9"></a>mu2 &lt;-<span class="st"> </span><span class="kw">mean</span>(no<span class="op">$</span>weight)</span>
-<span id="cb16-10"><a href="inference-on-means.html#cb16-10"></a></span>
-<span id="cb16-11"><a href="inference-on-means.html#cb16-11"></a>obs_diff &lt;-<span class="st"> </span>(mu1 <span class="op">-</span><span class="st"> </span>mu2)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="inference-on-means.html#cb19-1"></a>yes &lt;-<span class="st"> </span>yrbss <span class="op">%&gt;%</span></span>
+<span id="cb19-2"><a href="inference-on-means.html#cb19-2"></a><span class="st">  </span><span class="kw">filter</span>(physical_3plus <span class="op">==</span><span class="st"> &quot;yes&quot;</span>)</span>
+<span id="cb19-3"><a href="inference-on-means.html#cb19-3"></a></span>
+<span id="cb19-4"><a href="inference-on-means.html#cb19-4"></a>no &lt;-<span class="st"> </span>yrbss <span class="op">%&gt;%</span></span>
+<span id="cb19-5"><a href="inference-on-means.html#cb19-5"></a><span class="st">  </span><span class="kw">filter</span>(physical_3plus <span class="op">==</span><span class="st"> &quot;no&quot;</span>)</span>
+<span id="cb19-6"><a href="inference-on-means.html#cb19-6"></a></span>
+<span id="cb19-7"><a href="inference-on-means.html#cb19-7"></a>mu1 &lt;-<span class="st"> </span><span class="kw">mean</span>(yes<span class="op">$</span>weight)</span>
+<span id="cb19-8"><a href="inference-on-means.html#cb19-8"></a></span>
+<span id="cb19-9"><a href="inference-on-means.html#cb19-9"></a>mu2 &lt;-<span class="st"> </span><span class="kw">mean</span>(no<span class="op">$</span>weight)</span>
+<span id="cb19-10"><a href="inference-on-means.html#cb19-10"></a></span>
+<span id="cb19-11"><a href="inference-on-means.html#cb19-11"></a>obs_diff &lt;-<span class="st"> </span>(mu1 <span class="op">-</span><span class="st"> </span>mu2)</span></code></pre></div>
 <p><br></p>
 <p>Now recall our calculation from Exercise 3 to get our <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> i.e. the sizes of the two groups, remembering that "yes" means group 1 and "no" means group 2.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="inference-on-means.html#cb17-1"></a>yrbss <span class="op">%&gt;%</span></span>
-<span id="cb17-2"><a href="inference-on-means.html#cb17-2"></a><span class="st">  </span><span class="kw">group_by</span>(physical_3plus) <span class="op">%&gt;%</span></span>
-<span id="cb17-3"><a href="inference-on-means.html#cb17-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>())</span></code></pre></div>
-<pre><code>## # A tibble: 2 x 2
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="inference-on-means.html#cb20-1"></a>yrbss <span class="op">%&gt;%</span></span>
+<span id="cb20-2"><a href="inference-on-means.html#cb20-2"></a><span class="st">  </span><span class="kw">group_by</span>(physical_3plus) <span class="op">%&gt;%</span></span>
+<span id="cb20-3"><a href="inference-on-means.html#cb20-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>())</span></code></pre></div>
+<pre><code>## # A tibble: 3 x 2
 ##   physical_3plus count
 ##   &lt;chr&gt;          &lt;int&gt;
-## 1 no              2656
-## 2 yes             5695</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="inference-on-means.html#cb19-1"></a>n1 &lt;-<span class="st"> </span><span class="dv">5695</span></span>
-<span id="cb19-2"><a href="inference-on-means.html#cb19-2"></a></span>
-<span id="cb19-3"><a href="inference-on-means.html#cb19-3"></a>n2 &lt;-<span class="st"> </span><span class="dv">2656</span></span></code></pre></div>
+## 1 no              4404
+## 2 yes             8906
+## 3 &lt;NA&gt;             273</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="inference-on-means.html#cb22-1"></a>n1 &lt;-<span class="st"> </span><span class="dv">5695</span></span>
+<span id="cb22-2"><a href="inference-on-means.html#cb22-2"></a></span>
+<span id="cb22-3"><a href="inference-on-means.html#cb22-3"></a>n2 &lt;-<span class="st"> </span><span class="dv">2656</span></span></code></pre></div>
 <p><br></p>
 <p>Next, our <span class="math inline">\(t^*\)</span> value. As it happens, (due to a rigorously proved and fascinating result in Statistics), for sufficiently large n, the t-distribution tends toward the normal distribution. As in, when your sample size is big enough the t distribution is basically identical to the standard normal distribution. Therefore, since the samples we have are so large, our <span class="math inline">\(t^*\)</span> value this time is also 1.96 for a 95% confidence interval. Make sure you always check though, because you often will have a smaller sample and therefore your <span class="math inline">\(t^*\)</span> will be different!</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="inference-on-means.html#cb20-1"></a>t.star &lt;-<span class="st"> </span><span class="fl">1.96</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="inference-on-means.html#cb23-1"></a>t.star &lt;-<span class="st"> </span><span class="fl">1.96</span></span></code></pre></div>
 <p><br></p>
 <p>Now we will get the variances of the two groups.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="inference-on-means.html#cb21-1"></a>sigma_squared_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">var</span>(yes<span class="op">$</span>weight)</span>
-<span id="cb21-2"><a href="inference-on-means.html#cb21-2"></a></span>
-<span id="cb21-3"><a href="inference-on-means.html#cb21-3"></a>sigma_squared_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">var</span>(no<span class="op">$</span>weight)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="inference-on-means.html#cb24-1"></a>sigma_squared_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="kw">var</span>(yes<span class="op">$</span>weight)</span>
+<span id="cb24-2"><a href="inference-on-means.html#cb24-2"></a></span>
+<span id="cb24-3"><a href="inference-on-means.html#cb24-3"></a>sigma_squared_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">var</span>(no<span class="op">$</span>weight)</span></code></pre></div>
 <p><br></p>
 <p>Finally, let's put it all together and get our confidence interval!</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="inference-on-means.html#cb22-1"></a>standard.error &lt;-<span class="st"> </span><span class="kw">sqrt</span>((sigma_squared_<span class="dv">1</span><span class="op">/</span>n1) <span class="op">+</span><span class="st"> </span>(sigma_squared_<span class="dv">2</span><span class="op">/</span>n2))</span>
-<span id="cb22-2"><a href="inference-on-means.html#cb22-2"></a></span>
-<span id="cb22-3"><a href="inference-on-means.html#cb22-3"></a>lower.bound &lt;-<span class="st"> </span>obs_diff <span class="op">-</span><span class="st"> </span>t.star<span class="op">*</span>standard.error</span>
-<span id="cb22-4"><a href="inference-on-means.html#cb22-4"></a></span>
-<span id="cb22-5"><a href="inference-on-means.html#cb22-5"></a>upper.bound &lt;-<span class="st"> </span>obs_diff <span class="op">+</span><span class="st"> </span>t.star<span class="op">*</span>standard.error</span>
-<span id="cb22-6"><a href="inference-on-means.html#cb22-6"></a></span>
-<span id="cb22-7"><a href="inference-on-means.html#cb22-7"></a><span class="kw">c</span>(lower.bound, upper.bound)</span></code></pre></div>
-<pre><code>## [1] 0.7215522 2.3338998</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="inference-on-means.html#cb25-1"></a>standard.error &lt;-<span class="st"> </span><span class="kw">sqrt</span>((sigma_squared_<span class="dv">1</span><span class="op">/</span>n1) <span class="op">+</span><span class="st"> </span>(sigma_squared_<span class="dv">2</span><span class="op">/</span>n2))</span>
+<span id="cb25-2"><a href="inference-on-means.html#cb25-2"></a></span>
+<span id="cb25-3"><a href="inference-on-means.html#cb25-3"></a>lower.bound &lt;-<span class="st"> </span>obs_diff <span class="op">-</span><span class="st"> </span>t.star<span class="op">*</span>standard.error</span>
+<span id="cb25-4"><a href="inference-on-means.html#cb25-4"></a></span>
+<span id="cb25-5"><a href="inference-on-means.html#cb25-5"></a>upper.bound &lt;-<span class="st"> </span>obs_diff <span class="op">+</span><span class="st"> </span>t.star<span class="op">*</span>standard.error</span>
+<span id="cb25-6"><a href="inference-on-means.html#cb25-6"></a></span>
+<span id="cb25-7"><a href="inference-on-means.html#cb25-7"></a><span class="kw">c</span>(lower.bound, upper.bound)</span></code></pre></div>
+<pre><code>## [1] NA NA</code></pre>
 <p><br></p>
 <p><strong>Note</strong> It is equivalent to slightly re-arrange the above null and alternative hypotheses, that is we consider the difference between two means such that:</p>
 <p><span class="math display">\[H_0:  \mu_l - \mu_m = 0\]</span></p>
@@ -321,8 +324,8 @@ Hint
 <p>Namely there is no difference between the average weights of the two groups of students, or there is a difference in average weights between the two groups. Notice this is just a rearranging of the equation.</p>
 <p><br></p>
 <strong>Looking at the confidence interval, what do you conclude?</strong>
-<div id="radio_ADICXQVVLZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ADICXQVVLZ" value=""></input> <span>Since the obs. dif. value is outside of the CI, we fail to reject the null hypothesis i.e. We conclude there is no statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_ADICXQVVLZ" value="answer"></input> <span>Since the CI does not contain 0, we reject the null hypothesis in favour of the alternative i.e. We conclude there is a statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_ADICXQVVLZ" value=""></input> <span>Since the CI contains 0, we fail to reject the null hypothesis i.e. conclude that there is a statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_ADICXQVVLZ" value=""></input> <span>Since the CI does not contain 0, we fail to reject the null hypothesis i.e. conclude that there is no statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label>
+<div id="radio_OSJUEHZRWL" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OSJUEHZRWL" value=""></input> <span>Since the CI does not contain 0, we fail to reject the null hypothesis i.e. conclude that there is no statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_OSJUEHZRWL" value=""></input> <span>Since the CI contains 0, we fail to reject the null hypothesis i.e. conclude that there is a statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_OSJUEHZRWL" value=""></input> <span>Since the obs. dif. value is outside of the CI, we fail to reject the null hypothesis i.e. We conclude there is no statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_OSJUEHZRWL" value="answer"></input> <span>Since the CI does not contain 0, we reject the null hypothesis in favour of the alternative i.e. We conclude there is a statistically significant difference in the mean weights of students who are and aren't physcially active 3+ days a week.</span></label>
 </div>
 <div class="webex-solution">
 <button>

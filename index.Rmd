@@ -58,7 +58,6 @@ To run the code that appears in the consoles in this lab start by loading these 
 ```{r load-packages, echo=TRUE, eval=FALSE}
 library(tidyverse)
 library(infer)
-library(openintro)
 ```
 
 To run the code that appears in the consoles in this lab in **your own version of RStudio**, make sure the packages above are installed. You can install packages using the `install.packages("package name")` command. For example, to install `tidyverse` you should run the line `install.packages("tidyverse")`.

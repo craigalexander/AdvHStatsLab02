@@ -192,11 +192,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>• <strong>strength_training_7d</strong> : How many days out of the last 7 did the student lift weights.</p>
 <p>• <strong>school_night_hours_sleep</strong> : How many hours of sleep does the student typically get on a school night?</p>
 <p>First of all, it is always a good idea to look at the dataset you are working with to get a good sense of what it looks like, and the different types of data you may have, e.g. categorical or numerical.</p>
+<p>Load the <code>yrbss</code> data set into your workspace by typing the following code in an Rscript file in your local Rstudio.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introducing-the-data.html#cb2-1"></a><span class="kw">download.file</span>(<span class="st">&quot;https://www.openintro.org/data/rda/yrbss.rda&quot;</span>, <span class="dt">destfile =</span> <span class="st">&quot;yrbss.RData&quot;</span>)</span>
+<span id="cb2-2"><a href="introducing-the-data.html#cb2-2"></a><span class="kw">load</span>(<span class="st">&quot;yrbss.RData&quot;</span>)</span></code></pre></div>
 <p>Copy and run the code below to look at the first 6 rows of data and the structure of it.</p>
 <p>Recall from <a href="https://stats-glasgow.shinyapps.io/S1YZ_Lab_0_2021_no1/" target="_blank">Lab 0 in S1Y</a> that <code>head()</code> is a function where you put in it's brackets the name of the data frame, in this case <code>yrbss</code>, and it gives you the first 6 lines of that data to look at. You can press the arrows to go along and see all the variables.</p>
 <p>Again recall from <a href="https://stats-glasgow.shinyapps.io/S1YZ_Lab_0_2021_no1/" target="_blank">S1Y Lab 0</a> <code>str()</code> is another function again where you put the name of the data frame in the brackets, and this time it gives you the number of observations and the number of variables you have, the types of those variables e.g. "int" for an integer, "num" for a number and "chr" for a string of characters, as well as the first few values of each variable.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introducing-the-data.html#cb2-1"></a><span class="kw">head</span>(yrbss)</span>
-<span id="cb2-2"><a href="introducing-the-data.html#cb2-2"></a><span class="kw">str</span>(yrbss)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducing-the-data.html#cb3-1"></a><span class="kw">head</span>(yrbss)</span>
+<span id="cb3-2"><a href="introducing-the-data.html#cb3-2"></a><span class="kw">str</span>(yrbss)</span></code></pre></div>
 <p><br></p>
 <p><strong>How many observations/rows are there in the entire data set?</strong>
 <input class='webex-solveme nospaces' size='5' data-answer='["13583"]'/></p>
@@ -209,7 +212,7 @@ Hint
 <p><br>
 It is also worth checking if there are missing values in this data set.</p>
 <p>To find how many observations we are missing from the weight variable you can run the following R code:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introducing-the-data.html#cb3-1"></a><span class="kw">sum</span>(<span class="kw">is.na</span>(yrbss<span class="op">$</span>weight))</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introducing-the-data.html#cb4-1"></a><span class="kw">sum</span>(<span class="kw">is.na</span>(yrbss<span class="op">$</span>weight))</span></code></pre></div>
 <p>The <code>is.na()</code> function creates a vector that corresponds to the variable provided, (<code>weight</code> in this instance, from our dataset <strong>yrbss</strong>) with <code>TRUE</code> for a missing value and <code>FALSE</code> for a non-missing value. The <code>sum()</code> function then adds up the elements in this created vector such that <code>TRUE</code> is equivalent to 1 and <code>FALSE</code> is equivalent to 0 and hence the sum of this vector is equivalent to the number of <code>TRUE</code> entries which calculates how many of these "NA" values there are.</p>
 <p><br>
 <strong>How many observations are we missing weights from? You will find the previous example useful.</strong>
@@ -222,7 +225,7 @@ Hint
 </div>
 <p><br></p>
 <p>We can remove observations with missing values and create a data set without these using the code below:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introducing-the-data.html#cb4-1"></a>yrbss &lt;-<span class="st"> </span><span class="kw">na.omit</span>(yrbss)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introducing-the-data.html#cb5-1"></a>yrbss &lt;-<span class="st"> </span><span class="kw">na.omit</span>(yrbss)</span></code></pre></div>
 <p><br></p>
 <p><strong>How many observations/rows are there in the new entire data set (with missing values removed)?</strong>
 <input class='webex-solveme nospaces' size='4' data-answer='["8351"]'/></p>

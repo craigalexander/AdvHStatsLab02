@@ -34,6 +34,13 @@ It contains 13 variables:
 
 First of all, it is always a good idea to look at the dataset you are working with to get a good sense of what it looks like, and the different types of data you may have, e.g. categorical or numerical.
 
+Load the `yrbss` data set into your workspace by typing the following code in an Rscript file in your local Rstudio.
+
+```{r yrbss, eval = TRUE, echo = TRUE}
+download.file("https://www.openintro.org/data/rda/yrbss.rda", destfile = "yrbss.RData")
+load("yrbss.RData")
+```
+
 Copy and run the code below to look at the first 6 rows of data and the structure of it.
 
 Recall from <a href="https://stats-glasgow.shinyapps.io/S1YZ_Lab_0_2021_no1/" target="_blank">Lab 0 in S1Y</a> that `head()` is a function where you put in it's brackets the name of the data frame, in this case `yrbss`, and it gives you the first 6 lines of that data to look at. You can press the arrows to go along and see all the variables.
