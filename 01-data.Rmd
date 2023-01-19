@@ -36,7 +36,7 @@ First of all, it is always a good idea to look at the dataset you are working wi
 
 Load the `yrbss` data set into your workspace by typing the following code in an Rscript file in your local Rstudio.
 
-```{r yrbss, eval = TRUE, echo = TRUE}
+```{r yrbss, eval = FALSE, echo = TRUE}
 download.file("https://www.openintro.org/data/rda/yrbss.rda", destfile = "yrbss.RData")
 load("yrbss.RData")
 ```

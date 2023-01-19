@@ -203,8 +203,8 @@ Solution
 </div>
 <p><br></p>
 <strong>How would you describe the distribution of the weights of the students?</strong>
-<div id="radio_LWXICGUBWC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LWXICGUBWC" value="answer"></input> <span>The weights of the students appear fairly normally distributed, but are a little right-skewed i.e. have a reasonably long tail on the right of the histogram.</span></label><label><input type="radio" autocomplete="off" name="radio_LWXICGUBWC" value=""></input> <span>The weights do not actually appear very normally distributed, and probably follow some other distribution.</span></label><label><input type="radio" autocomplete="off" name="radio_LWXICGUBWC" value=""></input> <span>The weights of the students appear fairly normally distributed, but are a little left skewed i.e. have a long tail on the left of the histogram.</span></label><label><input type="radio" autocomplete="off" name="radio_LWXICGUBWC" value=""></input> <span>The weights are perfectly normally distributed.</span></label>
+<div id="radio_YFIBXNPBKT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_YFIBXNPBKT" value=""></input> <span>The weights do not actually appear very normally distributed, and probably follow some other distribution.</span></label><label><input type="radio" autocomplete="off" name="radio_YFIBXNPBKT" value=""></input> <span>The weights are perfectly normally distributed.</span></label><label><input type="radio" autocomplete="off" name="radio_YFIBXNPBKT" value="answer"></input> <span>The weights of the students appear fairly normally distributed, but are a little right-skewed i.e. have a reasonably long tail on the right of the histogram.</span></label><label><input type="radio" autocomplete="off" name="radio_YFIBXNPBKT" value=""></input> <span>The weights of the students appear fairly normally distributed, but are a little left skewed i.e. have a long tail on the left of the histogram.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -237,13 +237,12 @@ Solution
 </button>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="inference-for-numerical-data.html#cb12-1"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> yrbss, <span class="kw">aes</span>(<span class="dt">x =</span> physical_3plus, <span class="dt">y =</span> weight)) <span class="op">+</span></span>
 <span id="cb12-2"><a href="inference-for-numerical-data.html#cb12-2"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
-<pre><code>## Warning: Removed 1004 rows containing non-finite values (stat_boxplot).</code></pre>
 <p><img src="main_files/figure-html/ex2_solution-1.png" width="672" /></p>
 </div>
 <p><br></p>
 <strong>What could you interpret from this graph?</strong>
-<div id="radio_HDNYIATMZE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HDNYIATMZE" value=""></input> <span>The median weight appears to be higher for those that are not physically active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_HDNYIATMZE" value=""></input> <span>Those that are physically active 3+ days a week on average weigh more.</span></label><label><input type="radio" autocomplete="off" name="radio_HDNYIATMZE" value=""></input> <span>The mean weight appears to be higher for those that are physically active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_HDNYIATMZE" value="answer"></input> <span>The median weight appears to be higher for those that are physically active 3+ days a week.</span></label>
+<div id="radio_OVRSYLKUNT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OVRSYLKUNT" value="answer"></input> <span>The median weight appears to be higher for those that are physically active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_OVRSYLKUNT" value=""></input> <span>The median weight appears to be higher for those that are not physically active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_OVRSYLKUNT" value=""></input> <span>Those that are physically active 3+ days a week on average weigh more.</span></label><label><input type="radio" autocomplete="off" name="radio_OVRSYLKUNT" value=""></input> <span>The mean weight appears to be higher for those that are physically active 3+ days a week.</span></label>
 </div>
 <div class="webex-solution">
 <button>
@@ -253,9 +252,9 @@ Hint
 </div>
 <p><br></p>
 <p>The box plots show how the medians of the two distributions compare, but we can also compare the means of the distributions using the same procedure that we used back in Exercise 1, except our summary this time is a mean rather than a count. Run the code below to see the mean weights of the students, separated by "yes" they are physically active 3+ days a week or "no" they aren't.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="inference-for-numerical-data.html#cb14-1"></a>yrbss <span class="op">%&gt;%</span></span>
-<span id="cb14-2"><a href="inference-for-numerical-data.html#cb14-2"></a><span class="st">  </span><span class="kw">group_by</span>(physical_3plus) <span class="op">%&gt;%</span></span>
-<span id="cb14-3"><a href="inference-for-numerical-data.html#cb14-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_weight =</span> <span class="kw">mean</span>(weight, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="inference-for-numerical-data.html#cb13-1"></a>yrbss <span class="op">%&gt;%</span></span>
+<span id="cb13-2"><a href="inference-for-numerical-data.html#cb13-2"></a><span class="st">  </span><span class="kw">group_by</span>(physical_3plus) <span class="op">%&gt;%</span></span>
+<span id="cb13-3"><a href="inference-for-numerical-data.html#cb13-3"></a><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">mean_weight =</span> <span class="kw">mean</span>(weight, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</span></code></pre></div>
 <p>There is an observed difference, but is this difference statistically significant? In order to answer this question we will conduct a <strong>hypothesis test</strong>.</p>
 <p><br></p>
 
