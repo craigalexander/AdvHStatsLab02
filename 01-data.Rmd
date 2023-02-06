@@ -37,8 +37,10 @@ First of all, it is always a good idea to look at the dataset you are working wi
 Load the `yrbss` data set into your workspace by typing the following code in an Rscript file in your local Rstudio.
 
 ```{r yrbss, eval = FALSE, echo = TRUE}
-yrbss<-read.csv(url("https://raw.githubusercontent.com/Glasgow-Stats-L1-L2/S1Z_Lab1/main/data/yrbss.csv"))
+yrbss<-read.csv(url("https://raw.githubusercontent.com/Glasgow-Stats-L1-L2/S1Z_Lab1/main/yrbss.csv"))
 ```
+
+You may also download the dataset named `yrbss.csv` file from our Moodle course page. Save the file in your local computer and then use the `read.csv()` function to import the data in your R. You can load the data set into your workspace by running the code below in an Rscript file in your local Rstudio. Make sure that the `yrbss.csv` file is saved in the same folder as the Rscript file. 
 
 Copy and run the code below to look at the first 6 rows of data and the structure of it.
 
