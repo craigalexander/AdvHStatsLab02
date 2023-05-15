@@ -1,5 +1,5 @@
 ---
-title: "S1Z Lab 1"
+title: "Statistics Tutorial"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -31,13 +31,13 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-# Welcome to S1Z Lab 1 {.unnumbered}
+# Inference for numerical data {.unnumbered}
 
 ```{r graphic1, echo = FALSE, out.width = "100%", fig.cap = ""}
 knitr::include_graphics("images/naniar.jpg")
 ```
 
-In this lab, we will investigate the ways in which the statistics from a random sample can serve to make inference and **test hypotheses** about the true parameter in the larger population. We will explore here inference methods for numerical data. Before we begin however, let's revisit the difference between categorical and numerical data.
+In this tutorial, we will investigate the ways in which the statistics from a random sample can serve to make inference and **test hypotheses** about the true parameter in the larger population. We will explore here inference methods for numerical data. Before we begin however, let's revisit the difference between categorical and numerical data.
 
 **Categorical Data =** Data where an observation can belong to one of a certain fixed number of categories or groups. For example, someone's bloodtype. Your bloodtype can be one of A, B, AB or O.
 
@@ -67,4 +67,4 @@ To run the code that appears in the consoles in this lab in **your own version o
 
 <img src="images/OIBookImage.png" style="float: right;" width="100"/>
 
-The labs in S1Y/Z are a derivative of the labs on the <a href="https://www.openintro.org/book/os/">OpenIntro Statistics website</a> by the <a href="https://www.openintro.org/team/"> OpenIntro team</a> used under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Some of the artwork used is by <a href="https://github.com/allisonhorst/stats-illustrations">@allison_horst</a>
+This tutorial is a derivative of the labs on the <a href="https://www.openintro.org/book/os/">OpenIntro Statistics website</a> by the <a href="https://www.openintro.org/team/"> OpenIntro team</a> used under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. Some of the artwork used is by <a href="https://github.com/allisonhorst/stats-illustrations">@allison_horst</a>

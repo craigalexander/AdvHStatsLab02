@@ -1,6 +1,6 @@
-# Group Tasks {-}
+# Extra Tasks {-}
 
-The group tasks in this lab will **not be assessed**, however they do offer good practise into writing your own code in `R`.
+Try these extra tasks to practice writing your own code in `R`.
 
 ## Pregnancies Questions {-}
 
@@ -13,7 +13,7 @@ download.file("http://www.openintro.org/stat/data/nc.RData", destfile = "nc.RDat
 load("nc.RData")
 ```
 
-Before attempting the following exercises, explore the data as much or as little as you like using code from this Lab.
+Before attempting the following exercises, explore the data as much or as little as you like using code from this Tutorial.
 
 <br>
 
@@ -43,19 +43,22 @@ We are 90% certain that the average length of pregnancy for the population of wo
 
 Conduct a hypothesis test evaluating whether the average weight gained by younger mothers is different than the average weight gained by mature mothers.
 
-**Hint** Create a 95% confidence interval for the difference in mean weight gained between the two age groups. Don't forget to calculate a new standard error to use.
+```{r MCQ7}
+opts_Q7 <- sample(c("Given that the confidence interval contains 0, we reject the null hypothesis and conclude that there is a statistically significant difference in weight gained between younger and mature mothers in the population.",
+                    "Given that the confidence interval does not contain 0, we reject the null hypothesis and conclude that there is a statistically significant difference in weight gained between younger and mature mothers in the population.",
+                    "Given that the confidence interval does not contain 0, we do not reject the null hypothesis and conclude that there is no statistically significant difference in weight gained between younger and mature mothers in the population.",
+                    answer = "Given that the confidence interval contains 0, we do not reject the null hypothesis and conclude that there is no statistically significant difference in weight gained between younger and mature mothers in the population."))
+```
 
 <br>
 
 **What are your conclusions from this hypothesis test?**
+`r longmcq(opts_Q7)`
 
-a)  Given that the confidence interval contains 0, we reject the null hypothesis and conclude that there is a statistically significant difference in weight gained between younger and mature mothers in the population.
+`r hide("Hint")`
+Create a 95% confidence interval for the difference in mean weight gained between the two age groups. Don't forget to calculate a new standard error to use.
+`r unhide()`
 
-b)  Given that the confidence interval does not contain 0, we reject the null hypothesis and conclude that there is a statistically significant difference in weight gained between younger and mature mothers in the population.
-
-c)  Given that the confidence interval does not contain 0, we do not reject the null hypothesis and conclude that there is no statistically significant difference in weight gained between younger and mature mothers in the population.
-
-d)  Given that the confidence interval contains 0, we do not reject the null hypothesis and conclude that there is no statistically significant difference in weight gained between younger and mature mothers in the population.
 
 <br>
 
@@ -63,17 +66,17 @@ d)  Given that the confidence interval contains 0, we do not reject the null hyp
 
 Create side-by-side boxplots of the mothers' age (`mage`) for the two group; "mature mom" and "younger mom".
 
+
+
+```{r MCQ8}
+opts_Q8 <- sample(c("25", "30", answer="35", "40"))
+```
+
 <br>
 
 **Based on these boxplots, what would you say the age cutoff for a mother to be classified as a "younger mom" is?**
+`r longmcq(opts_Q8)`
 
-a)  25
-
-b)  30
-
-c)  35
-
-d)  40
 
 <br>
 <br>

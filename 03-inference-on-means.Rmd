@@ -2,7 +2,7 @@
 
 ## Conditions for Inference, or, a Normality Check {-}
 
-As seen on the bottom of <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=251" target="_blank">OpenIntro Page 251</a> two conditions are required for making inference on numerical variables:
+There are two conditions are required for making inference on numerical variables:
 
  - **Independence:** The sample observations must be independent. The most common way to satisfy this condition is when the sample is a simple random sample from the population.
 
@@ -95,7 +95,7 @@ The only question you can answer is whether there is a statistically significant
 
 ## Confidence Interval {-}
 
-Next, we will be conducting a hypothesis test, and ultimately a confidence interval, for a **difference of two means**. Namely, the mean weights in the two groups (those that are active 3+ days a week and the other group that aren't). More details on this can be found on <a href="https://www.openintro.org/redirect.php?go=os4_tablet&referrer=/stat/os4.php#page=267" target="_blank">page 267 of the OpenIntro textbook</a>.
+Next, we will be conducting a hypothesis test, and ultimately a confidence interval, for a **difference of two means**. Namely, the mean weights in the two groups (those that are active 3+ days a week and the other group that aren't).
 
 In general, we have some sort of 
 $$\textrm{Statistic} \pm \textrm{Percentile of a distribution}*\textrm{Standard Error}$$

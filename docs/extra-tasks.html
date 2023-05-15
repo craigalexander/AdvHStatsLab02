@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Statistics Tutorial</title>
-  <meta name="description" content="Page not found | Statistics Tutorial" />
+  <title>Extra Tasks | Statistics Tutorial</title>
+  <meta name="description" content="Extra Tasks | Statistics Tutorial" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Statistics Tutorial" />
+  <meta property="og:title" content="Extra Tasks | Statistics Tutorial" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Statistics Tutorial" />
+  <meta name="twitter:title" content="Extra Tasks | Statistics Tutorial" />
   
   
   
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="inference-on-means.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -178,11 +178,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="extra-tasks" class="section level1 unnumbered hasAnchor">
+<h1>Extra Tasks<a href="extra-tasks.html#extra-tasks" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Try these extra tasks to practice writing your own code in <code>R</code>.</p>
+<div id="pregnancies-questions" class="section level2 unnumbered hasAnchor">
+<h2>Pregnancies Questions<a href="extra-tasks.html#pregnancies-questions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children. We will work with a random sample of observations from this data set.</p>
+<p>Load the <code>nc</code> data set into your workspace by typing the following code in an Rscript file in your local Rstudio.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="extra-tasks.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">&quot;http://www.openintro.org/stat/data/nc.RData&quot;</span>, <span class="at">destfile =</span> <span class="st">&quot;nc.RData&quot;</span>)</span>
+<span id="cb25-2"><a href="extra-tasks.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">&quot;nc.RData&quot;</span>)</span></code></pre></div>
+<p>Before attempting the following exercises, explore the data as much or as little as you like using code from this Tutorial.</p>
+<p><br></p>
+<div id="task-1" class="section level3 unnumbered hasAnchor">
+<h3>Task 1<a href="extra-tasks.html#task-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Calculate a 95% confidence interval for the average length of pregnancies (<code>weeks</code>). Note that since you’re doing inference on a single population parameter, there is no explanatory variable.</p>
+<p><br></p>
+<p><strong>Complete the following sentence, giving your answers to 2 decimal places.</strong>
+We are 95% certain that the average length of pregnancy for the population of women is between <input class='webex-solveme nospaces' size='5' data-answer='["38.28"]'/> and <input class='webex-solveme nospaces' size='5' data-answer='["38.66"]'/> weeks.</p>
+<p><br></p>
+</div>
+<div id="task-2" class="section level3 unnumbered hasAnchor">
+<h3>Task 2<a href="extra-tasks.html#task-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Calculate a new confidence interval for the same parameter at the 90% confidence level.</p>
+<p><br></p>
+<p><strong>Complete the following sentence, giving your answers to 2 decimal places.</strong>
+We are 90% certain that the average length of pregnancy for the population of women is between <input class='webex-solveme nospaces' size='5' data-answer='["38.31"]'/> and <input class='webex-solveme nospaces' size='5' data-answer='["38.63"]'/> weeks.</p>
+<p><br></p>
+</div>
+<div id="task-3" class="section level3 unnumbered hasAnchor">
+<h3>Task 3<a href="extra-tasks.html#task-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Conduct a hypothesis test evaluating whether the average weight gained by younger mothers is different than the average weight gained by mature mothers.</p>
+<p><br></p>
+<strong>What are your conclusions from this hypothesis test?</strong>
+<div id="radio_XTCSOTMAZG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XTCSOTMAZG" value=""></input> <span>Given that the confidence interval contains 0, we reject the null hypothesis and conclude that there is a statistically significant difference in weight gained between younger and mature mothers in the population.</span></label><label><input type="radio" autocomplete="off" name="radio_XTCSOTMAZG" value=""></input> <span>Given that the confidence interval does not contain 0, we reject the null hypothesis and conclude that there is a statistically significant difference in weight gained between younger and mature mothers in the population.</span></label><label><input type="radio" autocomplete="off" name="radio_XTCSOTMAZG" value=""></input> <span>Given that the confidence interval does not contain 0, we do not reject the null hypothesis and conclude that there is no statistically significant difference in weight gained between younger and mature mothers in the population.</span></label><label><input type="radio" autocomplete="off" name="radio_XTCSOTMAZG" value="answer"></input> <span>Given that the confidence interval contains 0, we do not reject the null hypothesis and conclude that there is no statistically significant difference in weight gained between younger and mature mothers in the population.</span></label>
+</div>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>Create a 95% confidence interval for the difference in mean weight gained between the two age groups. Don't forget to calculate a new standard error to use.</p>
+</div>
+<p><br></p>
+</div>
+<div id="task-4" class="section level3 unnumbered hasAnchor">
+<h3>Task 4<a href="extra-tasks.html#task-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create side-by-side boxplots of the mothers' age (<code>mage</code>) for the two group; "mature mom" and "younger mom".</p>
+<p><br></p>
+<strong>Based on these boxplots, what would you say the age cutoff for a mother to be classified as a "younger mom" is?</strong>
+<div id="radio_GVFNVHHBPV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GVFNVHHBPV" value=""></input> <span>30</span></label><label><input type="radio" autocomplete="off" name="radio_GVFNVHHBPV" value="answer"></input> <span>35</span></label><label><input type="radio" autocomplete="off" name="radio_GVFNVHHBPV" value=""></input> <span>40</span></label><label><input type="radio" autocomplete="off" name="radio_GVFNVHHBPV" value=""></input> <span>25</span></label>
+</div>
+<p><br>
+<br></p>
+
+</div>
+</div>
 </div>
 <script>
 
@@ -360,7 +411,7 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
+<a href="inference-on-means.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

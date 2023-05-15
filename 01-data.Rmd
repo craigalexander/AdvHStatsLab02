@@ -1,6 +1,6 @@
 # Introducing The Data {-}
 
-In this lab, we will explore and visualise the data using the `tidyverse` suite of packages and perform statistical inference.
+In this tutorial, we will explore and visualise the data using the `tidyverse` suite of packages and perform statistical inference.
 
 We will be looking at data from the Youth Risk Behaviour Surveillance System (YRBSS) survey, which uses data from American high school students to help discover health patterns. The data frame is called `yrbss` and is part of the `openintro` package should you wish to look at it yourself.
 
@@ -44,9 +44,9 @@ You may also download the dataset named `yrbss.csv` file from our Moodle course 
 
 Copy and run the code below to look at the first 6 rows of data and the structure of it.
 
-Recall from <a href="https://stats-glasgow.shinyapps.io/S1YZ_Lab_0_2021_no1/" target="_blank">Lab 0 in S1Y</a> that `head()` is a function where you put in it's brackets the name of the data frame, in this case `yrbss`, and it gives you the first 6 lines of that data to look at. You can press the arrows to go along and see all the variables.
+`head()` is a function where you put in it's brackets the name of the data frame, in this case `yrbss`, and it gives you the first 6 lines of that data to look at. You can press the arrows to go along and see all the variables.
 
-Again recall from <a href="https://stats-glasgow.shinyapps.io/S1YZ_Lab_0_2021_no1/" target="_blank">S1Y Lab 0</a> `str()` is another function again where you put the name of the data frame in the brackets, and this time it gives you the number of observations and the number of variables you have, the types of those variables e.g. "int" for an integer, "num" for a number and "chr" for a string of characters, as well as the first few values of each variable.
+`str()` is another function again where you put the name of the data frame in the brackets, and this time it gives you the number of observations and the number of variables you have, the types of those variables e.g. "int" for an integer, "num" for a number and "chr" for a string of characters, as well as the first few values of each variable.
 
 ```{r explore, echo=TRUE, eval=FALSE}
 head(yrbss)

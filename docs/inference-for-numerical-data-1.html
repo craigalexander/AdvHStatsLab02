@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Statistics Tutorial</title>
-  <meta name="description" content="Page not found | Statistics Tutorial" />
+  <title>Inference for Numerical Data | Statistics Tutorial</title>
+  <meta name="description" content="Inference for Numerical Data | Statistics Tutorial" />
   <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Statistics Tutorial" />
+  <meta property="og:title" content="Inference for Numerical Data | Statistics Tutorial" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Statistics Tutorial" />
+  <meta name="twitter:title" content="Inference for Numerical Data | Statistics Tutorial" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="introducing-the-data.html"/>
+<link rel="next" href="inference-on-means.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -178,11 +178,92 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="inference-for-numerical-data-1" class="section level1 unnumbered hasAnchor">
+<h1>Inference for Numerical Data<a href="inference-for-numerical-data-1.html#inference-for-numerical-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="images/meet_data.jpg" width="100%" /></p>
+<p>Using the data from the yrbss survey, we will now analyze the weight of the students in kilograms, stored in the <code>weight</code> variable in the <code>yrbss</code> data frame.</p>
+<p>We can obtain the summary statistics of the variable by running the following code:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="inference-for-numerical-data-1.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(yrbss<span class="sc">$</span>weight)</span></code></pre></div>
+<p>To visualise the distribution of the weights, you may want to produce a box-plot for the <code>weight</code> variable by running the following code:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="inference-for-numerical-data-1.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="inference-for-numerical-data-1.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><br></p>
+<div id="exercise-1" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 1<a href="inference-for-numerical-data-1.html#exercise-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Another way of visualising the distribution of a variable is to look at the histogram of the data. Write code to produce a histogram for the <code>weight</code> variable.</p>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>We want to use the function <code>ggplot()</code>, specifying the data argument and the variable to go along the <span class="math inline">\(x\)</span>-axis. Use <code>geom_histogram()</code> to produce a histogram.</p>
+</div>
+<div class="webex-solution">
+<button>
+Solution
+</button>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="inference-for-numerical-data-1.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, <span class="fu">aes</span>(<span class="at">x =</span> weight)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="inference-for-numerical-data-1.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="main_files/figure-html/ex1_solution-1.png" width="672" /></p>
+</div>
+<p><br></p>
+<strong>How would you describe the distribution of the weights of the students?</strong>
+<div id="radio_JWTVHDLMIS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JWTVHDLMIS" value=""></input> <span>The weights do not actually appear very normally distributed, and probably follow some other distribution.</span></label><label><input type="radio" autocomplete="off" name="radio_JWTVHDLMIS" value=""></input> <span>The weights are perfectly normally distributed.</span></label><label><input type="radio" autocomplete="off" name="radio_JWTVHDLMIS" value="answer"></input> <span>The weights of the students appear fairly normally distributed, but are a little right-skewed i.e. have a reasonably long tail on the right of the histogram.</span></label><label><input type="radio" autocomplete="off" name="radio_JWTVHDLMIS" value=""></input> <span>The weights of the students appear fairly normally distributed, but are a little left skewed i.e. have a long tail on the left of the histogram.</span></label>
+</div>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>Look carefully at the shape of the graph, particularly towards the right.</p>
+</div>
+<p><br></p>
+<p>Next, consider the possible relationship between a high schooler's weight and their physical activity. Plotting the data is a useful first step because it helps us quickly visualise trends, identify strong associations and develop research questions.</p>
+<p>First, we will create a new variable <code>physical_3plus</code>, which will be coded as either "yes" if they are physically active for at least 3 days a week, and "no" if not, using the <code>mutate()</code> function.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="inference-for-numerical-data-1.html#cb10-1" aria-hidden="true" tabindex="-1"></a>yrbss <span class="ot">&lt;-</span> yrbss <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="inference-for-numerical-data-1.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">physical_3plus =</span> <span class="fu">ifelse</span>(yrbss<span class="sc">$</span>physically_active_7d <span class="sc">&gt;</span> <span class="dv">2</span>, <span class="st">&quot;yes&quot;</span>, <span class="st">&quot;no&quot;</span>))</span></code></pre></div>
+<p>Look at the code below that creates a boxplot. If you wanted to add another dimension to the boxplot, say, splitting it by some other variable, you would want to add an <code>x =</code> argument inside the <code>aes</code> bracket, making sure there's a comma between it and the <code>y = weight</code> part. Some variable name would follow the <code>x =</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="inference-for-numerical-data-1.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="inference-for-numerical-data-1.html#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><br></p>
+</div>
+<div id="exercise-2" class="section level3 unnumbered hasAnchor">
+<h3>Exercise 2<a href="inference-for-numerical-data-1.html#exercise-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Make a side-by-side boxplot of <code>physical_3plus</code> and <code>weight</code> i.e. a boxplot with the <code>physical_3plus</code> variable on the x axis and the <code>weight</code> variable on the y axis. This will show side by side the boxplots of weights, comparing between the yes and no for <code>physical_3plus</code>.</p>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>With the <code>aes()</code> argument you want to specify that <code>x = physical_3plus</code>.</p>
+</div>
+<div class="webex-solution">
+<button>
+Solution
+</button>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="inference-for-numerical-data-1.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> yrbss, <span class="fu">aes</span>(<span class="at">x =</span> physical_3plus, <span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="inference-for-numerical-data-1.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="main_files/figure-html/ex2_solution-1.png" width="672" /></p>
+</div>
+<p><br></p>
+<strong>What could you interpret from this graph?</strong>
+<div id="radio_GGQWKEJCOG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GGQWKEJCOG" value=""></input> <span>The mean weight appears to be higher for those that are physically active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_GGQWKEJCOG" value="answer"></input> <span>The median weight appears to be higher for those that are physically active 3+ days a week.</span></label><label><input type="radio" autocomplete="off" name="radio_GGQWKEJCOG" value=""></input> <span>Those that are physically active 3+ days a week on average weigh more.</span></label><label><input type="radio" autocomplete="off" name="radio_GGQWKEJCOG" value=""></input> <span>The median weight appears to be higher for those that are not physically active 3+ days a week.</span></label>
+</div>
+<div class="webex-solution">
+<button>
+Hint
+</button>
+<p>This is just an initial impression, so we don't decide anything for certain yet until we've done some analysis.</p>
+</div>
+<p><br></p>
+<p>The box plots show how the medians of the two distributions compare, but we can also compare the means of the distributions using the same procedure that we used back in Exercise 1, except our summary this time is a mean rather than a count. Run the code below to see the mean weights of the students, separated by "yes" they are physically active 3+ days a week or "no" they aren't.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="inference-for-numerical-data-1.html#cb13-1" aria-hidden="true" tabindex="-1"></a>yrbss <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="inference-for-numerical-data-1.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(physical_3plus) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="inference-for-numerical-data-1.html#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_weight =</span> <span class="fu">mean</span>(weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<p>There is an observed difference, but is this difference statistically significant? In order to answer this question we will conduct a <strong>hypothesis test</strong>.</p>
+<p><br></p>
+
+</div>
 </div>
 <script>
 
@@ -360,8 +441,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-
-
+<a href="introducing-the-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inference-on-means.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
